@@ -1,26 +1,20 @@
-const myProfile = {
-  name: "a",
-  age: "25"
+// スプレッド構文
+
+// 配列の展開
+const arr1 = [1, 2];
+
+// console.log(arr1);
+
+// console.log(...arr1);
+
+const sumFunc = (num1, num2) => {
+  console.log(num1 + num2);
 };
 
-const message1 = `${myProfile.name}, ${myProfile.age}`;
-console.log(message1);
+sumFunc(arr1[0], arr1[1]);
+sumFunc(...arr1);
 
-// 分割代入
-const { name, age } = myProfile;
-const message2 = `${name}, ${age}`;
-
-console.log(message2);
-
-const list = ["list", 20];
-
-const [nameList, ageList] = list;
-const message3 = nameList + ageList;
-
-console.log(message3);
-
-const sayHello = (name) => {
-  console.log("こんにちは" + name);
-};
-
-sayHello("tes");
+// まとめる
+const arr2 = [1, 2, 3, 4, 5];
+const [num1, num2, ...arr3] = arr2;
+console.log(arr3);
