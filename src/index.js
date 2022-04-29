@@ -1,11 +1,26 @@
-const func1 = function (str) {
-  return str;
+const myProfile = {
+  name: "a",
+  age: "25"
 };
 
-console.log(func1("func1"));
+const message1 = `${myProfile.name}, ${myProfile.age}`;
+console.log(message1);
 
-const func2 = (str) => {
-  return str;
+// 分割代入
+const { name, age } = myProfile;
+const message2 = `${name}, ${age}`;
+
+console.log(message2);
+
+const list = ["list", 20];
+
+const [nameList, ageList] = list;
+const message3 = nameList + ageList;
+
+console.log(message3);
+
+const sayHello = (name) => {
+  console.log("こんにちは" + name);
 };
 
-console.log(func2("re"));
+sayHello("tes");
